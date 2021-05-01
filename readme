@@ -1,0 +1,46 @@
+📕배운것들 
+
+----
+
+✔실시간으로 현재 시각보는방법 
+----------
+```
+     -setInterval (함수 , 실행시간간격 ) 사용
+```
+</br>
+
+```
+     function init() {
+        getTime();
+        setInterval(getTime, 1000)
+    }
+```
+</br>
+
+✔초단위가 한자리로 초기화 될때 앞에 0 부치기 
+----------
+```
+ EX) 10:32:4 ❌ -> 10:32:04 ⭕ 
+ ```
+ </br>
+
+ 삼항연산자 사용 
+ ```
+     colockTitle.innerText= `${hours}:${minutes}:${seconds <10 ? `0${seconds}`:seconds}`;
+```
+
+✔사용자 아이디 컴퓨터에 저장하기 
+---------
+    -localStroate 사용
+
+```
+    function loadName(){
+        ...
+        if(currentUser === null){
+
+        }else{
+            paintGreeting(currentUser);
+        }
+
+
+```
