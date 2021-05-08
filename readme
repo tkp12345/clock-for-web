@@ -3,9 +3,10 @@
 ----
 
 ✔실시간으로 현재 시각보는방법 
-----------
+----
+
 ```
-     -setInterval (함수 , 실행시간간격 ) 사용
+ -setInterval (함수 , 실행시간간격 ) 사용
 ```
 </br>
 
@@ -19,28 +20,61 @@
 
 ✔초단위가 한자리로 초기화 될때 앞에 0 부치기 
 ----------
-```
+  ```
  EX) 10:32:4 ❌ -> 10:32:04 ⭕ 
  ```
  </br>
 
- 삼항연산자 사용 
+####  삼항연산자 사용 :
  ```
      colockTitle.innerText= `${hours}:${minutes}:${seconds <10 ? `0${seconds}`:seconds}`;
 ```
 
-✔사용자 아이디 컴퓨터에 저장하기 
+✔입력받은 사용자이름 컴퓨터에 저장하기 
 ---------
-    -localStroate 사용
+```
+ -localStroate 사용
 
 ```
-    function loadName(){
-        ...
-        if(currentUser === null){
 
-        }else{
-            paintGreeting(currentUser);
-        }
+ex)
+
+```
+    const USER_LS ="currentUser"
+
+    ...
+
+    function saveName(text){
+    localStorage.setItem(USER_LS, text)
+}
 
 
+```
+
+✔ event.preventDefault() 란 ?
+---------
+
+
+✔ HTML 에 element(요소)를  추가 하고 싶을때?
+---------
+    document.createElement() 사용! 
+
+ex)
+```
+    function paintToDo(text){
+        //요소를 가져옵니다
+        const li = document.createElement("li")
+        const delBtn = document.createElement("button");
+        delBtn.value ="🗑";
+
+        //삽입하고싶은 요소 선택 
+        const span = document.createElement("span");
+
+        //삽입요소에 대입 
+        span.innerText = text; 
+
+        //가져온 요소에 삽입한 요소 자식으로 추가 
+        li.appendChild(span);
+        li.appendChild(delBtn);
+    }
 ```
